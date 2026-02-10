@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.screen {
+  position: absolute;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+
+.screen.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 14px 28px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: #ff4d6d;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+button:hover {
+  transform: scale(1.08);
+}
+
+.heart {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 22px;
+  animation: float 6s linear infinite;
+}
+
+.yes-button {
+  background: white;
+  color: #ff4d6d;
+}
+
+.no-button {
+  background: #ff4d6d;
+  color: white;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}

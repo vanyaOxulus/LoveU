@@ -6,5 +6,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  color: white;
   overflow: hidden;
+}
+
+.container {
+  padding: 20px;
+  animation: bounceIn 0.8s ease;
+}
+
+.cat-img {
+  width: 250px;
+  max-width: 80%;
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  70% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
 }
